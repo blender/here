@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB2FD92B1B7813CB00236FCC /* StopsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2FD92A1B7813CB00236FCC /* StopsHeaderView.swift */; };
+		DB310BA61B7A08EB00EFDC76 /* StopAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB310BA51B7A08EB00EFDC76 /* StopAnnotation.swift */; };
+		DB310BA81B7B3F5A00EFDC76 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB310BA71B7B3F5A00EFDC76 /* Extensions.swift */; };
+		DB4081441B7625E300AA8BB7 /* StopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4081431B7625E300AA8BB7 /* StopsTableViewController.swift */; };
 		DB5D57941B74C90700BCA2C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D57931B74C90700BCA2C3 /* AppDelegate.swift */; };
 		DB5D57971B74C90700BCA2C3 /* here.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB5D57951B74C90700BCA2C3 /* here.xcdatamodeld */; };
 		DB5D57991B74C90700BCA2C3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D57981B74C90700BCA2C3 /* MasterViewController.swift */; };
@@ -15,6 +19,13 @@
 		DB5D57A01B74C90700BCA2C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5D579F1B74C90700BCA2C3 /* Images.xcassets */; };
 		DB5D57A31B74C90700BCA2C3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5D57A11B74C90700BCA2C3 /* LaunchScreen.xib */; };
 		DB5D57AF1B74C90700BCA2C3 /* hereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D57AE1B74C90700BCA2C3 /* hereTests.swift */; };
+		DB5D57BA1B74D51800BCA2C3 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D57B91B74D51800BCA2C3 /* Protocols.swift */; };
+		DB5D57BD1B74D7F600BCA2C3 /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D57BC1B74D7F600BCA2C3 /* Itinerary.swift */; };
+		DB80044D1B75097200A7F5FB /* ItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80044C1B75097200A7F5FB /* ItineraryViewController.swift */; };
+		DBDE05141B774252007B599A /* there.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDE05131B774252007B599A /* there.framework */; };
+		DBDE05171B77F48C007B599A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDE05161B77F48C007B599A /* LocationCell.swift */; };
+		DBEB212A1B74D9F3001F17E5 /* ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB21291B74D9F3001F17E5 /* ManagedObject.swift */; };
+		DBEB212E1B74EB85001F17E5 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB212D1B74EB85001F17E5 /* Stop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB2FD92A1B7813CB00236FCC /* StopsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopsHeaderView.swift; sourceTree = "<group>"; };
+		DB310BA51B7A08EB00EFDC76 /* StopAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopAnnotation.swift; sourceTree = "<group>"; };
+		DB310BA71B7B3F5A00EFDC76 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DB4081431B7625E300AA8BB7 /* StopsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopsTableViewController.swift; sourceTree = "<group>"; };
 		DB5D578E1B74C90700BCA2C3 /* here.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = here.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5D57921B74C90700BCA2C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB5D57931B74C90700BCA2C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +55,13 @@
 		DB5D57A81B74C90700BCA2C3 /* hereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5D57AD1B74C90700BCA2C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB5D57AE1B74C90700BCA2C3 /* hereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hereTests.swift; sourceTree = "<group>"; };
+		DB5D57B91B74D51800BCA2C3 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		DB5D57BC1B74D7F600BCA2C3 /* Itinerary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Itinerary.swift; sourceTree = "<group>"; };
+		DB80044C1B75097200A7F5FB /* ItineraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItineraryViewController.swift; sourceTree = "<group>"; };
+		DBDE05131B774252007B599A /* there.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = there.framework; path = "../../there/build/Debug-iphoneos/there.framework"; sourceTree = "<group>"; };
+		DBDE05161B77F48C007B599A /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		DBEB21291B74D9F3001F17E5 /* ManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObject.swift; sourceTree = "<group>"; };
+		DBEB212D1B74EB85001F17E5 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBDE05141B774252007B599A /* there.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +83,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB4081421B7625BE00AA8BB7 /* stop */ = {
+			isa = PBXGroup;
+			children = (
+				DB4081431B7625E300AA8BB7 /* StopsTableViewController.swift */,
+				DBDE05161B77F48C007B599A /* LocationCell.swift */,
+				DB2FD92A1B7813CB00236FCC /* StopsHeaderView.swift */,
+				DB310BA51B7A08EB00EFDC76 /* StopAnnotation.swift */,
+			);
+			name = stop;
+			sourceTree = "<group>";
+		};
 		DB5D57851B74C90700BCA2C3 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +115,10 @@
 		DB5D57901B74C90700BCA2C3 /* here */ = {
 			isa = PBXGroup;
 			children = (
+				DBDE05151B77425D007B599A /* frameworks */,
+				DB80044A1B75092F00A7F5FB /* ui */,
+				DB5D57BB1B74D7E500BCA2C3 /* model */,
+				DB5D57B81B74D4C200BCA2C3 /* misc */,
 				DB5D57931B74C90700BCA2C3 /* AppDelegate.swift */,
 				DB5D57981B74C90700BCA2C3 /* MasterViewController.swift */,
 				DB5D579A1B74C90700BCA2C3 /* DetailViewController.swift */,
@@ -116,6 +154,50 @@
 				DB5D57AD1B74C90700BCA2C3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB5D57B81B74D4C200BCA2C3 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				DB5D57B91B74D51800BCA2C3 /* Protocols.swift */,
+				DB310BA71B7B3F5A00EFDC76 /* Extensions.swift */,
+			);
+			name = misc;
+			sourceTree = "<group>";
+		};
+		DB5D57BB1B74D7E500BCA2C3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DB5D57BC1B74D7F600BCA2C3 /* Itinerary.swift */,
+				DBEB212D1B74EB85001F17E5 /* Stop.swift */,
+				DBEB21291B74D9F3001F17E5 /* ManagedObject.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		DB80044A1B75092F00A7F5FB /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				DB4081421B7625BE00AA8BB7 /* stop */,
+				DB80044B1B75093B00A7F5FB /* itinerary */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		DB80044B1B75093B00A7F5FB /* itinerary */ = {
+			isa = PBXGroup;
+			children = (
+				DB80044C1B75097200A7F5FB /* ItineraryViewController.swift */,
+			);
+			name = itinerary;
+			sourceTree = "<group>";
+		};
+		DBDE05151B77425D007B599A /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBDE05131B774252007B599A /* there.framework */,
+			);
+			name = frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,10 +300,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB80044D1B75097200A7F5FB /* ItineraryViewController.swift in Sources */,
+				DB2FD92B1B7813CB00236FCC /* StopsHeaderView.swift in Sources */,
 				DB5D57941B74C90700BCA2C3 /* AppDelegate.swift in Sources */,
+				DBEB212A1B74D9F3001F17E5 /* ManagedObject.swift in Sources */,
+				DB5D57BD1B74D7F600BCA2C3 /* Itinerary.swift in Sources */,
+				DBEB212E1B74EB85001F17E5 /* Stop.swift in Sources */,
+				DB4081441B7625E300AA8BB7 /* StopsTableViewController.swift in Sources */,
+				DBDE05171B77F48C007B599A /* LocationCell.swift in Sources */,
+				DB5D57BA1B74D51800BCA2C3 /* Protocols.swift in Sources */,
 				DB5D57971B74C90700BCA2C3 /* here.xcdatamodeld in Sources */,
 				DB5D57991B74C90700BCA2C3 /* MasterViewController.swift in Sources */,
+				DB310BA61B7A08EB00EFDC76 /* StopAnnotation.swift in Sources */,
 				DB5D579B1B74C90700BCA2C3 /* DetailViewController.swift in Sources */,
+				DB310BA81B7B3F5A00EFDC76 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +442,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/tommasopiazza/Documents/lab/there/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = here/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,6 +456,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/tommasopiazza/Documents/lab/there/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = here/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -419,6 +519,7 @@
 				DB5D57B41B74C90700BCA2C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB5D57B51B74C90700BCA2C3 /* Build configuration list for PBXNativeTarget "hereTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +528,7 @@
 				DB5D57B71B74C90700BCA2C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

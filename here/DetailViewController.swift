@@ -7,39 +7,144 @@
 //
 
 import UIKit
+import MapKit
+import there
+import CoreData
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, ThereClientSettable, ItinerarySettable, ManagedObjectContextSettable, MKMapViewDelegate {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet var containerView: UIView!
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var thereClient:ThereClient!
+    var managedObjectContext: NSManagedObjectContext!
+    
+    
+    var polyLine:MKPolyline!
+    var polyLineRenderer:MKPolylineRenderer!
+    var pinAnnotations = [StopAnnotation]()
+    
+    var itinerary:Itinerary?
 
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        self.mapView.delegate = self
+        self.requestRoute(self.itinerary)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action: "editItineray:")
+    }
+    
+    private func requestRoute(itinerary:Itinerary?) {
+        
+        if let itinerary = itinerary  {
+            
+            if let stops = itinerary.stops {
+            
+                var stopsArray = Array(stops)
+                stopsArray.sort {
+                    
+                    $0.number < $1.number
+                }
+                
+                var wayPoints = [(Double, Double)]()
+                
+                for stop in stopsArray {
+                    
+                    wayPoints = wayPoints + [(stop.lat, stop.lon)]
+                }
+                
+                self.thereClient.routeWithWayPoins(wayPoints, mode:ThereRoutingMode.FastestCar) { (wayPoints, error) in
+                    
+                    if (error != nil) {
+                        self.showError(error!)
+                    }
+                    else {
+                        self.placePinsOnMap(wayPoints!)
+                        self.drawRoute()
+                        self.centerMap()
+                    }
+                }
+                
+            }
 
-    var detailItem: AnyObject? {
-        didSet {
-            // Update the view.
-            self.configureView()
         }
     }
-
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail: AnyObject = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.valueForKey("timeStamp")!.description
+    
+    private func showError(error:NSError) {
+        //Boring lauzy pop up
+    }
+    
+    private func placePinsOnMap(wayPoints:[ThereWayPoint]){
+        
+        self.mapView.removeAnnotations(self.pinAnnotations)
+        self.pinAnnotations = [StopAnnotation]()
+        
+        if wayPoints.count > 0 {
+            
+            for i in 0...wayPoints.count-1 {
+                
+                let annotation = StopAnnotation(latitude: wayPoints[i].lat, longitude: wayPoints[i].lon, title: "Stop: \(i)", subtitle: "\(wayPoints[i].lat), \(wayPoints[i].lon)")
+                self.pinAnnotations += [annotation]
+                self.mapView.addAnnotation(annotation)
             }
         }
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
+    
+    private func drawRoute(){
+        
+        self.mapView.removeOverlay(self.polyLine)
+        
+        var coordinates:[CLLocationCoordinate2D] = self.pinAnnotations.reduce([CLLocationCoordinate2D]()) { (array, annotation) in
+            
+            return array + [annotation.coordinate]
+        }
+        
+        self.polyLine = MKPolyline(coordinates: &coordinates, count: coordinates.count)
+        self.polyLineRenderer = MKPolylineRenderer(overlay: self.polyLine)
+        self.polyLineRenderer.lineWidth = 5
+        self.polyLineRenderer.strokeColor = UIColor.redColor()
+        self.polyLineRenderer.alpha = 0.7
+        
+        self.mapView.addOverlay(self.polyLine)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func centerMap() {
+        
+        if let firstAnnotation = self.pinAnnotations.first {
+            
+            self.mapView.centerCoordinate = firstAnnotation.coordinate
+        }
     }
-
-
+    
+    
+    func editItineray(sender: AnyObject) {
+        
+        if let viewController:ItineraryViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("ItineraryViewController") as? ItineraryViewController) {
+            
+            viewController.managedObjectContext = self.managedObjectContext
+            viewController.thereClient = self.thereClient
+            viewController.modalPresentationStyle = UIModalPresentationStyle.FormSheet
+            viewController.itinerary = itinerary
+            viewController.delegate = self
+            
+            self.presentViewController(viewController, animated: true, completion: nil)
+        }
+    }
 }
 
+
+extension DetailViewController : MKMapViewDelegate {
+    
+    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
+        return self.polyLineRenderer
+    }
+}
+
+extension DetailViewController : ItineraryViewControllerDelegate {
+    
+    func itineraryViewController(viewController: ItineraryViewController, didSaveItinerary itinerary: Itinerary) {
+        self.itinerary = itinerary
+        self.requestRoute(self.itinerary)
+    }
+}

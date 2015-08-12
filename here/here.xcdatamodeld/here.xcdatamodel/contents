@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Itinerary" representedClassName="Itinerary">
+        <attribute name="createdAt" optional="YES" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="displayName" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="stops" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Stop" inverseName="itinerary" inverseEntity="Stop" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="Stop" representedClassName="Stop" syncable="YES">
+        <attribute name="createdAt" attributeType="Date" syncable="YES"/>
+        <attribute name="displayName" attributeType="String" syncable="YES"/>
+        <attribute name="lat" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="lon" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="number" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <relationship name="itinerary" maxCount="1" deletionRule="Nullify" destinationEntity="Itinerary" inverseName="stops" inverseEntity="Itinerary" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Itinerary" positionX="-11441" positionY="-4744" width="128" height="90"/>
+        <element name="Stop" positionX="-11144" positionY="-4756" width="128" height="135"/>
     </elements>
 </model>

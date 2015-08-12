@@ -46,6 +46,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>ThereApiCredentials</key>
+	<dict>
+		<key>app_id</key>
+		<string>WGs9hKOLMAlWsDoYHFh8</string>
+		<key>app_code</key>
+		<string>GlF6ZfXv0uJfuJ0kSEILvw</string>
+	</dict>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
