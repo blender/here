@@ -1,39 +1,39 @@
 
 /* Class = "UITableViewController"; title = "Master"; ObjectID = "7bK-jq-Zjz"; */
-"7bK-jq-Zjz.title" = "List of Itineraries";
+"7bK-jq-Zjz.title" = "Маршруты";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "Arm-wq-HPj"; */
-"Arm-wq-HPj.text" = "Title";
+"Arm-wq-HPj.text" = "Название";
 
 /* Class = "UIViewController"; title = "Detail"; ObjectID = "JEX-9P-axG"; */
-"JEX-9P-axG.title" = "Detail";
+"JEX-9P-axG.title" = "Подробно";
 
 /* Class = "UILabel"; text = "Add stops by searching"; ObjectID = "Mbp-7h-eSM"; */
-"Mbp-7h-eSM.text" = "Add a stop";
+"Mbp-7h-eSM.text" = "Добавить остановку";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Mfj-ak-eWI"; */
-"Mfj-ak-eWI.text" = "Label";
+"Mfj-ak-eWI.text" = "Лейбл";
 
 /* Class = "UIButton"; normalTitle = "Done"; ObjectID = "NE1-lv-X9J"; */
-"NE1-lv-X9J.normalTitle" = "Done";
+"NE1-lv-X9J.normalTitle" = "Готово";
 
 /* Class = "UINavigationController"; title = "Master"; ObjectID = "RMx-3f-FxP"; */
-"RMx-3f-FxP.title" = "Master";
+"RMx-3f-FxP.title" = "Мастер";
 
 /* Class = "UILabel"; text = "Name your new itinerary"; ObjectID = "Rgj-B5-bhU"; */
-"Rgj-B5-bhU.text" = "Name your new itinerary";
+"Rgj-B5-bhU.text" = "Назовите Ваш маршрут";
 
 /* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "SIp-qE-SX1"; */
-"SIp-qE-SX1.normalTitle" = "Edit";
+"SIp-qE-SX1.normalTitle" = "Изменить";
 
 /* Class = "UINavigationItem"; title = "Itineraries"; ObjectID = "Zdf-7t-Un8"; */
-"Zdf-7t-Un8.title" = "List of Itineraries";
+"Zdf-7t-Un8.title" = "Список маршрутов";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "fUG-gS-Ofy"; */
-"fUG-gS-Ofy.text" = "Title";
+"fUG-gS-Ofy.text" = "Заголовок";
 
 /* Class = "UINavigationItem"; title = "Your Way"; ObjectID = "mOI-FS-AaM"; */
-"mOI-FS-AaM.title" = "Your Way";
+"mOI-FS-AaM.title" = "Ваш маршрут";
 
 /* Class = "UITextField"; placeholder = "Enter a name"; ObjectID = "nTV-EF-kYe"; */
-"nTV-EF-kYe.placeholder" = "Enter a name";
+"nTV-EF-kYe.placeholder" = "Введите название";
