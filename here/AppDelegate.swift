@@ -1,10 +1,24 @@
+//    The MIT License (MIT)
 //
-//  AppDelegate.swift
-//  here
+//    Copyright (c) <2015> <Tommaso Piazza>
 //
-//  Created by Tommaso Piazza on 07/08/15.
-//  Copyright (c) 2015 Alloc Init. All rights reserved.
+//    Permission is hereby granted, free of charge, to any person obtaining a copy
+//    of this software and associated documentation files (the "Software"), to deal
+//    in the Software without restriction, including without limitation the rights
+//    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//    copies of the Software, and to permit persons to whom the Software is
+//    furnished to do so, subject to the following conditions:
 //
+//    The above copyright notice and this permission notice shall be included in
+//    all copies or substantial portions of the Software.
+//
+//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//    THE SOFTWARE.
 
 import UIKit
 import CoreData
@@ -24,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let appCode = thereCredentials["app_code"] as! String
         
         self.thereClient = ThereClient(appId: appId, appCode: appCode)
-        ThereClient.logLevel = ThereLogLevel.Debug
+        ThereClient.logLevel = ThereLogLevel.Error
         
         let splitViewController = self.window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
@@ -80,7 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
             dict[NSLocalizedFailureReasonErrorKey] = failureReason
             dict[NSUnderlyingErrorKey] = error
-            error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
+            error = NSError(domain: "com.allocinit.here", code: 9999, userInfo: dict)
             NSLog("Unresolved error \(error), \(error!.userInfo)")
             abort()
         }

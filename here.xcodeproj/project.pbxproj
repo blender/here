@@ -23,7 +23,7 @@
 		DB5D57BD1B74D7F600BCA2C3 /* Itinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5D57BC1B74D7F600BCA2C3 /* Itinerary.swift */; };
 		DB64CB541B7D15BB00BE94AB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB64CB561B7D15BB00BE94AB /* Localizable.strings */; };
 		DB80044D1B75097200A7F5FB /* ItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB80044C1B75097200A7F5FB /* ItineraryViewController.swift */; };
-		DBDE05141B774252007B599A /* there.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDE05131B774252007B599A /* there.framework */; };
+		DB9D71791B7F3C1B00FF64A8 /* there.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9D71781B7F3C1B00FF64A8 /* there.framework */; };
 		DBDE05171B77F48C007B599A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDE05161B77F48C007B599A /* LocationCell.swift */; };
 		DBEB212A1B74D9F3001F17E5 /* ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB21291B74D9F3001F17E5 /* ManagedObject.swift */; };
 		DBEB212E1B74EB85001F17E5 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB212D1B74EB85001F17E5 /* Stop.swift */; };
@@ -68,7 +68,7 @@
 		DB64CB581B7D15BF00BE94AB /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DB64CB591B7D15C000BE94AB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DB80044C1B75097200A7F5FB /* ItineraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItineraryViewController.swift; sourceTree = "<group>"; };
-		DBDE05131B774252007B599A /* there.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = there.framework; path = "../../there/build/Debug-iphoneos/there.framework"; sourceTree = "<group>"; };
+		DB9D71781B7F3C1B00FF64A8 /* there.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = there.framework; path = ../Carthage/Build/iOS/there.framework; sourceTree = "<group>"; };
 		DBDE05161B77F48C007B599A /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		DBEB21291B74D9F3001F17E5 /* ManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObject.swift; sourceTree = "<group>"; };
 		DBEB212D1B74EB85001F17E5 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBDE05141B774252007B599A /* there.framework in Frameworks */,
+				DB9D71791B7F3C1B00FF64A8 /* there.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +206,7 @@
 		DBDE05151B77425D007B599A /* frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DBDE05131B774252007B599A /* there.framework */,
+				DB9D71781B7F3C1B00FF64A8 /* there.framework */,
 			);
 			name = frameworks;
 			sourceTree = "<group>";
@@ -220,6 +220,7 @@
 			buildPhases = (
 				DB5D578A1B74C90700BCA2C3 /* Sources */,
 				DB5D578B1B74C90700BCA2C3 /* Frameworks */,
+				DB9D717A1B7F3C3700FF64A8 /* ShellScript */,
 				DB5D578C1B74C90700BCA2C3 /* Resources */,
 			);
 			buildRules = (
@@ -308,6 +309,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DB9D717A1B7F3C3700FF64A8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/there.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DB5D578A1B74C90700BCA2C3 /* Sources */ = {
@@ -421,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -460,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -475,6 +493,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/tommasopiazza/Documents/lab/there/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = here/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -489,6 +508,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/tommasopiazza/Documents/lab/there/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = here/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
