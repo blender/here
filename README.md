@@ -15,3 +15,11 @@ Here is a sample application written in Swift 1.2 that makes use of the [There](
 ## Limitations
 - Stops must be connected by land
 - No support for searching for places or landmarks
+
+## Screenshots
+![s0](http://i.imgur.com/S9kd7MDl.png)
+![s1](http://i.imgur.com/qEDkGXLl.png)
+![s2](http://i.imgur.com/goS3Udel.png)
+![s3](http://i.imgur.com/dgwtjeil.png)
+![s4iPad](http://i.imgur.com/Zx9FnB0l.png)
+![s5iPad](http://i.imgur.com/QA5CWB6l.jpg)
